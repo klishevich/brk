@@ -1,12 +1,12 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'bgk'
+set :application, 'brk'
 set :deploy_user, 'mike'
 
 set :filter, :roles => %w{app web}
 set :scm, :git
-set :repo_url, 'git@github.com:klishevich/bgk.git'
+set :repo_url, 'git@github.com:klishevich/brk.git'
 set :assets_roles, [:app]
 set :keep_releases, 5
 set :linked_files, %w{config/database.yml config/secrets.yml config/application.yml}
@@ -16,6 +16,7 @@ set(:config_files, %w(
   database.yml
   unicorn_init.sh
   secrets.yml
+  application.yml
 ))
 set(:executable_config_files, %w(
   unicorn_init.sh
@@ -52,7 +53,7 @@ namespace :unicorn do
   desc 'Restart unicorn 2'
   task :restart2 do
     on roles(:app) do
-      execute "/etc/init.d/unicorn_bgk_production restart"
+      execute "/etc/init.d/unicorn_brk_production restart"
     end
   end  
 

@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: bgk_dev
+  database: brk_dev
   username: first
   password: asdfg
   host: localhost
