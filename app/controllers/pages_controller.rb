@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, except: [:show, :home]
+  # before_filter :authenticate, except: [:show, :home]
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|

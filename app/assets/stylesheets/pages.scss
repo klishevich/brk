@@ -36,35 +36,36 @@
 }
 
 .navbar{
-	font-family: "CenturyGothicBold";
-	font-size: 18px;
-}
-
-.navbar-default {
-    background-color: transparent; 
-    border-color: transparent;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: black;
-	&:hover {
-      text-decoration: underline;
+	font-size: 1em;
+  background: #333;
+  border-radius: 0;
+  border: 0;
+  font-weight: normal;
+  .navbar-nav>li>a {
+    color: #fff;
+    &:hover {
+        color: lightgrey;
+      }
+    &:focus {
+      color: lightgrey;
     }
-}
-
-#razmestit-zakaz {
-  background-image: url(/images/button_zakaz3.jpg);
-  background-size: 239px 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-color: #c7b39b; /* Цвет фона */
-  a {
-	  color: white;
-	  padding-left: 40px;
-      padding-right: 40px;
+    &:active {
+      color: lightgrey;
+    }
   }
 }
 
 #nav-desktop {
   padding-left: 60px;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  height: 48px;
+}
+
+.container-fluid {
+  width: 1024px;
 }
