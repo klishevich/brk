@@ -23,8 +23,8 @@ set(:executable_config_files, %w(
 ))
 set(:symlinks, [
   {
-    # source: "/home/mike/apps/{{full_app_name}}/shared/config/unicorn_init.sh",
-    # link: "/etc/init.d/unicorn_{{full_app_name}}"
+    source: "/home/mike/apps/{{full_app_name}}/shared/config/unicorn_init.sh",
+    link: "/etc/init.d/unicorn_{{full_app_name}}"
   }
 ])
 
@@ -37,14 +37,6 @@ namespace :deploy do
     end
   end
   after 'deploy:publishing', 'deploy:restart' 
-
-  # after :restart, :clear_cache do
-  #   on roles(:app), in: :groups, limit: 4, wait: 10 do
-  #     before :deploy, "deploy:check_revision"
-  #     after 'deploy:setup_config', 'nginx:reload'
-  #     after 'deploy:publishing', 'deploy:restart'
-  #   end
-  # end  
 
 end
 
